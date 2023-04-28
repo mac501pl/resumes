@@ -1,0 +1,276 @@
+\documentclass[A4,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[OT4]{polski}
+\usepackage[polish]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{arimo}
+\usepackage{fontawesome}
+\usepackage{tabto}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[document]{ragged2e}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{scrextend}
+
+\usepackage[
+  includefoot,
+  top = 1.3cm,
+  bottom = 3.5cm,
+  left = 1.2cm,
+  right = 1.2cm,
+]{geometry}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead{}
+
+\cfoot{\justify{\footnotesize{
+
+\vspace{20pt}
+\begin{spacing}{0.9}
+I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+\end{spacing}
+}}}
+
+\setlist[itemize]{noitemsep}
+
+\renewcommand*\arraystretch{0.75}
+
+\NumTabs{18}
+
+\input{glyphtounicode}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\CVItem}[1]{\item\small{\setstretch{0.8}#1}}
+
+\newcommand{\CVSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\setstretch{0.4}#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\Course}[3]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\setstretch{0.6}#1} & #2 \\
+      \footnotesize #3 \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\CompanyAndLocation}[2]{
+  % \end{addmargin}
+  \vspace{5pt}
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \large\textbf{\setstretch{0.4}#1} & \small{#2} \\
+    \end{tabular*}
+  % \begin{addmargin}[5pt]{0em}
+  % \vspace{-30pt}
+}
+
+\newcommand{\TitleAndPeriod}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{  #1} & \small #2 \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\CompanySkills}[1]{
+  \vspace{-2pt}
+  \footnotesize{\textbf{  Skills:} #1}
+  \vspace{5pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny{$\bullet$}}}$}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny{$\bullet$}}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\vspace{2pt}\begin{itemize}\vspace{-10pt}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\begin{document}
+
+\textbf{\Huge \scshape{Maciej Żyłka}} \\ 
+{\Large \scshape{Software engineer}} \\ \vspace{5pt} 
+\begin{minipage}[c]{0.4\textwidth}
+    \faPhone \tab +48 512 924 807\\
+    \faMapMarker \tab Katowice, Poland\\
+    \faEnvelopeO \tab \href{mailto:mzylka123@gmail.com}{\underline{mzylka123@gmail.com}}\\
+\end{minipage}
+\begin{minipage}[c]{0.4\textwidth}
+    \faGithub \tab \href{https://github.com/mac501pl}{\underline{https://github.com/mac501pl}} \\
+    %\faGlobe \tab \href{https://mac501pl.github.io}{\underline{https://mac501pl.github.io}} \\
+    \faLinkedinSquare \tab \href{https://www.linkedin.com/in/mac501pl/}{\underline{https://www.linkedin.com/in/mac501pl/}} \\
+\end{minipage}
+
+\section{Experience}
+  \CVSubHeadingListStart
+    \CompanyAndLocation
+	{SoftServe}{Gdańsk, Singapore (remote)}
+    \TitleAndPeriod	
+	{Software engineer at DBS Bank}{Jul. 2022 \textbf{--} present}
+      \CVItemListStart
+        \CVItem{Development of UI components and backend services}
+        \CVItem{Optimization of the web application, code refactoring and investigation of potential application enhancements}
+        \CVItem{App regionalization to multiple countries}
+        \CVItem{Code review and testing}
+      \CVItemListEnd
+    \CompanySkills{Java, Spring Boot, Reactor, MariaDB, Maven, Angular, MaterialUI, Jenkins, BitBucket, Jira}
+    \CompanyAndLocation
+	{infoShare Academy}{Remote}
+    \TitleAndPeriod	
+	{Instructor (\textit{freelance})}{Mar. 2023 \textbf{--} present}
+      \CVItemListStart
+        \CVItem{Mentoring and guidance of a group of 16 students}
+        \CVItem{One-on-one consulting}
+        \CVItem{Leading code reviews and offering constructive feedback}
+        \CVItem{Scrum related duties}
+      \CVItemListEnd
+    \CompanySkills{React, Firebase, Vite, TypeScript, styled-components, ESLint, Prettier, Jira, GitHub, GitHub
+actions, Netlify, Scrum, teaching}
+    \CompanyAndLocation
+	{Siemens EDA (previously -- Mentor Graphics)}{Katowice, Wilsonville (remote) \textbf{--} (\textit{2 years, 6 months})}
+    \TitleAndPeriod	
+	{Software engineer / DevOps}{Oct. 2021 \textbf{--} Jun. 2022}
+      \CVItemListStart
+        \CVItem{Development and maintenance of the frontend of an internal build system}
+        \CVItem{Development of a RESTful authentication microservice}
+        \CVItem{Knowledge sharing, teaching and mentoring interns}
+        \CVItem{Working with GitLab pipelines}
+      \CVItemListEnd
+      \CompanySkills{Java, Jersey, Hibernate, LDAP, React, Redux, Docker, Kubernetes, microservices, REST, Jira, GitLab}
+    \TitleAndPeriod	
+	{Software engineer (\textit{junior})}{Apr. 2021 \textbf{--} Sep. 2021}
+      \CVItemListStart
+        \CVItem{Development of an enterprise data management application}
+        \CVItem{Code review and testing}
+      \CVItemListEnd
+      \CompanySkills{Java EE, Swing, WildFly, Google Web Toolkit (GWT), Subversion, Elasticsearch}
+    \TitleAndPeriod
+      {DevOps engineer (\textit{internship})}{May 2020 \textbf{--} Mar. 2021}
+      \CVItemListStart
+        \CVItem{Development and maintenance of the frontend of administrative pages of an internal build system}
+        \CVItem{Development of a RESTful authentication microservice}
+        \CVItem{Development of an internal tool used by QA Engineers}
+      \CVItemListEnd
+      \CompanySkills{React, Redux, TypeScript, Java, Jersey, Hibernate, LDAP, Swing, Perl}
+    \TitleAndPeriod
+      {QA engineer (\textit{internship})}{Jan. 2020 \textbf{--} Apr. 2020}
+      \CVItemListStart
+        \CVItem{Development and maintenance of tests for a RESTful microservice}
+        \CVItem{Development of an internal tool used by QA Engineers}
+    \CVItemListEnd
+    \CompanySkills{Java, Jersey, Hibernate, JUnit, Swing, Perl}
+    \CompanyAndLocation
+      {Inelo}{Bielsko--Biała \textbf{--} (\textit{1 month})}
+    \TitleAndPeriod    
+      {QA Engineer (\textit{apprenticeship})}{Jul. 2019}
+      \CVItemListStart
+        \CVItem{Creation and maintenance of Selenium tests for a web application}
+        \CVItem{Performing manual testing}
+      \CVItemListEnd
+      \CompanySkills{Java, Selenium, JUnit, Angular}
+  \CVSubHeadingListEnd
+
+\section{Skills}
+  \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+    \textbf{Frontend}{: React, Angular, Svelte, SolidJS, Next.js, SvelteKit, Astro, TypeScript, SCSS, Tailwind, Bootstrap, styled-components, Redux, TanStack Query, Vite, Rollup, Webpack, pnpm, Prisma, Mongoose} \\
+    \textbf{Backend}{: Java, Spring Boot, Jersey, Hibernate, Maven, Node.js, Deno, Express, MongoDB, MySQL/MariaDB, PostreSQL, Redis, WildFly, Tomcat} \\
+    \textbf{Other programming languages}{: C/C++, Rust, C\#, PHP, Perl, Python} \\
+    \textbf{Software and tools}{: IntelliJ IDEA, VS Code, ESLint, prettier, WebStorm, Eclipse, Jira, Confluence, GitHub, GitLab, BitBucket} \\
+    \textbf{Operating systems}{: Windows 10, Windows 11, Debian, Arch Linux, OpenBSD} \\
+    \textbf{Testing}{: TDD, JUnit, vitest, Testing library, Jest, Selenium, Cypress, Playwright, Storybook} \\
+    \textbf{Other}{: Docker, CI/CD, Firebase, Pocketbase, git, REST, HTTP, tRPC, Electron, Tauri, Subversion, Asembler, \LaTeX, SCRUM, UML, Android}
+    }}
+  \end{itemize}
+
+\section{Education}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {University of Silesia in Katowice $|$ \emph{\small{Faculty of Science and Technology}}}{Sosnowiec}
+      {B. Sc. Degree in Computer Science}{Oct. 2017 \textbf{--} Apr. 2021}
+      \CVItemListStart
+        \CVItem{Chosen specialization \textbf{--} IT systems engineering}
+        \CVItem{Grade \textbf{--} excellent (5)}
+        \CVItem{Academic scholarship for outstanding academic results}
+        \CVItem{Partaking in an internship and skills development program for faculty of computer science students}
+        \CVItem{During university I was giving private lessons in mathematics and computer science}
+      \CVItemListEnd
+    \CVSubheading
+      {Nicholas Copernicus High School}{Bielsko--Biała}
+      {Extra classes: mathematics, computer science, English, geography}{Sep. 2014 \textbf{--} May 2017}
+  \CVSubHeadingListEnd
+
+\section{Languages}
+  \CVSubHeadingListStart
+    \CVSubSubheading{English \textbf{--} full professional proficiency (certified)}{}
+    \CVSubSubheading{Polish \textbf{--} native language}{}
+    \CVSubSubheading{German \textbf{--} elementary proficiency}{}
+  \CVSubHeadingListEnd
+
+\section{Workshops}
+  \CVSubHeadingListStart
+    \Course
+      {C++ Projects Creation Fundamentals}{Dec. 2019}
+      {Mentor Graphics}
+    \Course
+      {Scrum, testing - who needs that?}{Nov. 2019}
+      {Mentor Graphics}
+    \Course
+      {\makecell[l]{"Be quick or be dead" (Applied encryption, Performance focused C++ programming,\\Python - new C++ modules)}}{Nov. 2019}
+      {Mentor Graphics}
+    \Course
+      {Java - Good Practices}{Dec. 2018}
+      {EQ System}
+  \CVSubHeadingListEnd
+
+\section{Certifications and diplomas}
+  \CVSubHeadingListStart
+    \CVSubSubheading{ISTQB Certified Tester Foundation Level}{Dec. 2019}
+    \CVSubSubheading{Academic Certificate of Foreign Language Knowledge}{Feb. 2019}
+  \CVSubHeadingListEnd
+
+\section{Courses}
+  \CVSubHeadingListStart
+    \CVSubSubheading{ISTQB Foundation Level Certificate Exam Preparation}{Dec. 2019}
+    \CVSubSubheading{Course for Specialized English in IT}{Oct. 2019 \textbf{--} Feb. 2020}
+    \CVSubSubheading{Webmaster \textbf{--} Websites Creation}{Jun. 2015}
+    \CVSubSubheading{Speed English Language School}{}
+  \CVSubHeadingListEnd
+%Projekty
+
+\end{document}
